@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<title>飞机大战</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body data-status="index" id="main">
+
+		<audio src="sound/biubiubiu.mp3" autoplay="false" loop="false" id="biu"></audio>
+		<audio src="sound/boom.mp3" autoplay="true" loop="true" id="boom"></audio>
+		<audio src="sound/button.mp3" autoplay="true" loop="true" id="button"></audio>
+		<audio src="sound/die.mp3" autoplay="true" loop="true" id="die"></audio>
+		<audio src="sound/music.mp3" autoplay="true" loop="true" id="bgmusic"></audio>
+
+		<canvas id="game"></canvas>
+		<div class="ui-index">
+			<h1>飞机大作战</h1>
+			<div class="btn-group">
+				<button class="js-start btn">开始游戏</button>
+				<button class="js-setting btn">游戏设置</button>
+				<button class="js-rule btn">游戏说明</button>
+			</div>
+		</div>
+		<div class="ui-rule ui-panel">
+			<h2>游戏说明</h2>
+			<p>这是一个走心的游戏，对不对，对不对^_^</p>
+			<button class="js-confirm-rule">我知道了</button>
+		</div>
+		<div class="ui-setting ui-panel">
+			<h2>游戏设置</h2>
+			<ul class="setting-group">
+				<li class="setting">
+					<span>音乐设置</span>
+					<select class="defaultMusic">
+						<option value="0">开启音乐</option>
+						<option value="1">关闭音乐</option>
+					</select>
+				</li>
+				<li class="setting">
+					<span>背景设置</span>
+					<select class="defaultBg">
+						<option value="0">背景1</option>
+						<option value="1">背景2</option>
+						<option value="2">背景3</option>
+						<option value="3">背景4</option>
+					</select>
+				</li>
+				<li class="setting">
+					<span>战机设置</span>
+					<select class="defaultPlane">
+						<option value="0">蓝色战机</option>
+						<option value="1">骚红战机</option>
+					</select>
+				</li>
+			</ul>
+			<button class="js-confirm-setting">确认设置</button>
+		</div>
+		<div class="ui-getScore">
+			<p></p>
+		</div>
+		<div class="ui-reload">
+			<h1>重新开始</h1>
+			<p>你一共获得了：</p>
+			<p class="score"></p>
+			<div class="btn-group">
+				<button class="btn">再来一次</button>
+			</div>
+		</div>
+		<!-- 页面 js -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/resource.js"></script>
+		<script src="js/element.js"></script>
+		<script src="js/enemy.js"></script>
+		<script src="js/plane.js"></script>
+		<script src="js/bullet.js"></script>
+		
+		<script src="js/app.js"></script>
+	</body>
+
+</html>
